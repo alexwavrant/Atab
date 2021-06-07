@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var testHabit = Habit(name: "Running", emoji: "🏃🏻‍♂️")
+    @StateObject var testHabit = Habit(name: "Running")
     
     @StateObject var listOfHabits : HabitsList = HabitsList()
         
@@ -21,17 +21,42 @@ struct ContentView: View {
         NavigationView {
             
             ScrollView {
-                LazyVGrid(columns: layout, spacing: 20) {
-                    ForEach(listOfHabits.list, id: \.self) { item in
-                        HabitCard(habit: item)
+                VStack(alignment: .leading) {
+                    Text("Not yet completed")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                    LazyVGrid(columns: layout, spacing: 20) {
+                        ForEach(listOfHabits.list, id: \.self) { item in
+                            if (item.accomplishedToday == false) {
+                                HabitCard(habit: item)
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 10)
+                    
+                    Text("Completed")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .padding(.leading)
+                        .padding(.top)
+                    
+                    LazyVGrid(columns: layout, spacing: 20) {
+                        ForEach(listOfHabits.list, id: \.self) { item in
+                            if (item.accomplishedToday == true) {
+                                HabitCard(habit: item)
+                            }
+                        }
                     }
                 }
-                .padding(.horizontal, 10)
-                .padding(.top, 30)
+                
             }
+            .padding(.top, 20)
             
             .navigationBarTitle("Your Habits")
-            .navigationBarItems(trailing: NavigationLink("Add a habit", destination: AddItemView().environmentObject(listOfHabits)))
+            .navigationBarItems(trailing: NavigationLink("Add a habit", destination: AddHabitView().environmentObject(listOfHabits)))
         }
         
     }
