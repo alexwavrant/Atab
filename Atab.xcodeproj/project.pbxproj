@@ -14,6 +14,10 @@
 		2EF6D1EE2667E6F200AD3D60 /* AtabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D1ED2667E6F200AD3D60 /* AtabTests.swift */; };
 		2EF6D1F92667E6F200AD3D60 /* AtabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D1F82667E6F200AD3D60 /* AtabUITests.swift */; };
 		2EF6D2072667E8AE00AD3D60 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D2062667E8AE00AD3D60 /* Habit.swift */; };
+		2EF6D2092667EE9900AD3D60 /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D2082667EE9900AD3D60 /* HabitCard.swift */; };
+		2EF6D21C266A384B00AD3D60 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D21B266A384B00AD3D60 /* AddItemView.swift */; };
+		2EF6D21E266A3C8700AD3D60 /* HabitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D21D266A3C8700AD3D60 /* HabitsList.swift */; };
+		2EF6D220266AA3DC00AD3D60 /* AddItemEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF6D21F266AA3DB00AD3D60 /* AddItemEmojiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		2EF6D1F82667E6F200AD3D60 /* AtabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtabUITests.swift; sourceTree = "<group>"; };
 		2EF6D1FA2667E6F200AD3D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF6D2062667E8AE00AD3D60 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		2EF6D2082667EE9900AD3D60 /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+		2EF6D21B266A384B00AD3D60 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		2EF6D21D266A3C8700AD3D60 /* HabitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsList.swift; sourceTree = "<group>"; };
+		2EF6D21F266AA3DB00AD3D60 /* AddItemEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemEmojiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +108,13 @@
 				2EF6D1DB2667E6ED00AD3D60 /* AtabApp.swift */,
 				2EF6D2062667E8AE00AD3D60 /* Habit.swift */,
 				2EF6D1DD2667E6ED00AD3D60 /* ContentView.swift */,
+				2EF6D2082667EE9900AD3D60 /* HabitCard.swift */,
 				2EF6D1DF2667E6F200AD3D60 /* Assets.xcassets */,
 				2EF6D1E42667E6F200AD3D60 /* Info.plist */,
 				2EF6D1E12667E6F200AD3D60 /* Preview Content */,
+				2EF6D21B266A384B00AD3D60 /* AddItemView.swift */,
+				2EF6D21D266A3C8700AD3D60 /* HabitsList.swift */,
+				2EF6D21F266AA3DB00AD3D60 /* AddItemEmojiView.swift */,
 			);
 			path = Atab;
 			sourceTree = "<group>";
@@ -262,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF6D2092667EE9900AD3D60 /* HabitCard.swift in Sources */,
 				2EF6D2072667E8AE00AD3D60 /* Habit.swift in Sources */,
+				2EF6D21E266A3C8700AD3D60 /* HabitsList.swift in Sources */,
 				2EF6D1DE2667E6ED00AD3D60 /* ContentView.swift in Sources */,
+				2EF6D220266AA3DC00AD3D60 /* AddItemEmojiView.swift in Sources */,
 				2EF6D1DC2667E6ED00AD3D60 /* AtabApp.swift in Sources */,
+				2EF6D21C266A384B00AD3D60 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

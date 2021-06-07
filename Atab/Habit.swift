@@ -6,14 +6,32 @@
 //
 
 import Foundation
+import SwiftUI
 
-class Habit {
-    var nameOfTheHabit: String
-    var currentStreak = 0
-    var longestStreak = 0
+class Habit: ObservableObject, Hashable {
     
-    init(name: String) {
-        nameOfTheHabit = name
+    // THis function is used to conform to the Equatable protocol
+    static func == (lhs: Habit, rhs: Habit) -> Bool {
+        lhs.uuid == rhs.uuid
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(uuid)
+    }
+    
+    // Because Habit is an external class, we implement the ObservableObject protocol
+    // Everytime a @Published variale is updated, the view using it is going to reload with the new value
+    @Published var nameOfTheHabit = ""
+    @Published var currentStreak = 0
+    @Published var longestStreak = 0
+    @Published var associatedEmoji = ""
+    @Published var accomplishedToday = false
+    
+    let uuid = UUID().uuidString // Used to conform to the Hashable and Equatable protocol
+    
+    init(name: String, emoji: String) {
+        self.nameOfTheHabit = name
+        self.associatedEmoji = emoji
     }
     
     func incrementCurrentStreak() {
